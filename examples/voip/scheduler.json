@@ -1,0 +1,16 @@
+[
+    {
+        "voip": {
+            "scheduler": {
+                "now": "2026-07-02T05:57:41+0200",
+                "enable": 0,
+                "unblock": 0,
+                "status": "",
+                "statusuntil": "",
+                "statusremaining": 0,
+                "rules": [],
+                "savedRules": []
+            }
+        }
+    }
+]

@@ -1,0 +1,36 @@
+[
+    {
+        "phy_interface": [
+            {
+                "ring_test": {
+                    "id": 1,
+                    "status": "Idle"
+                },
+                "echo_test": {
+                    "id": 1,
+                    "status": "Ringing"
+                }
+            },
+            {
+                "ring_test": {
+                    "id": 2,
+                    "status": ""
+                },
+                "echo_test": {
+                    "id": 2,
+                    "status": ""
+                }
+            }
+        ],
+        "host": [
+            {
+                "id": 1,
+                "hostname": "Bbox-TV-001",
+                "macaddress": "d0:5a:00:08:a1:82",
+                "ipaddress": "192.168.1.157",
+                "active": 1
+            }
+        ],
+        "usb": []
+    }
+]

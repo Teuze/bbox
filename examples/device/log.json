@@ -1,0 +1,46 @@
+[
+    {
+        "log": [
+            {
+                "date": "2026-07-02T05:56:26+0200",
+                "log": "VOIP_DIAG_ECHOTEST_OFF",
+                "param": 1
+            },
+            {
+                "date": "2026-07-02T05:55:56+0200",
+                "log": "VOIP_DIAG_ECHOTEST_ON",
+                "param": 1
+            },
+            {
+                "date": "2026-07-02T05:55:56+0200",
+                "log": "VOIP_DIAG_RINGTEST_OFF",
+                "param": 1
+            },
+            {
+                "date": "2026-07-02T05:55:47+0200",
+                "log": "VOIP_DIAG_RINGTEST_ON",
+                "param": 1
+            },
+            {
+                "date": "2026-07-02T05:55:26+0200",
+                "log": "DISPLAY_STATE",
+                "param": "I"
+            },
+            {
+                "date": "2026-07-02T05:54:25+0200",
+                "log": "DEVICE_UP",
+                "param": "d0:5a:00:08:a1:82;192.168.1.157;Bbox-TV-001"
+            },
+            {
+                "date": "2026-07-02T05:53:10+0200",
+                "log": "WAN_UP",
+                "param": "176.160.175.56"
+            },
+            {
+                "date": "2026-07-02T05:53:10+0200",
+                "log": "WAN_ROUTE_ADDED",
+                "param": "176.160.128.1"
+            }
+        ]
+    }
+]

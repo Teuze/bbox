@@ -1,0 +1,12 @@
+[
+    {
+        "upnp": {
+            "igd": {
+                "state": 0,
+                "uuid": "49221541-3dc7-4db7-94cf-6e3fba968043",
+                "friendlyname": "Bbox",
+                "enable": 0
+            }
+        }
+    }
+]

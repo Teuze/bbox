@@ -1,0 +1,59 @@
+[
+    {
+        "lan": {
+            "ip": {
+                "state": "Up",
+                "mtu": 1500,
+                "ipaddress": "192.168.1.254",
+                "ip6enable": 1,
+                "ip6state": "Discover",
+                "ip6address": [],
+                "ip6prefix": [],
+                "netmask": "255.255.255.0",
+                "mac": "f0:4d:d4:07:26:f5",
+                "hostname": "bbox",
+                "domain": "lan",
+                "aliases": "mabbox.bytel.fr,gestionbbox.lan,localdevice.abrstream.tech"
+            },
+            "switch": {
+                "ports": [
+                    {
+                        "id": 1,
+                        "state": "Up",
+                        "link_mode": "1000baseT-HD",
+                        "blocked": 0,
+                        "flickering": 0
+                    },
+                    {
+                        "id": 2,
+                        "state": "Up",
+                        "link_mode": "10baseT-FD",
+                        "blocked": 0,
+                        "flickering": 0
+                    },
+                    {
+                        "id": 3,
+                        "state": "Down",
+                        "link_mode": "100baseTx-HD",
+                        "blocked": 0,
+                        "flickering": 0
+                    },
+                    {
+                        "id": 4,
+                        "state": "Down",
+                        "link_mode": "100baseTx-HD",
+                        "blocked": 0,
+                        "flickering": 0
+                    },
+                    {
+                        "id": 5,
+                        "state": "Down",
+                        "link_mode": "100baseTx-HD",
+                        "blocked": 0,
+                        "flickering": 0
+                    }
+                ]
+            }
+        }
+    }
+]

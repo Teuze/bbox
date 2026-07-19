@@ -1,0 +1,15 @@
+[
+    {
+        "wireless": {
+            "scheduler": {
+                "now": "2026-07-02T05:58:15+0200",
+                "enable": 0,
+                "status": "",
+                "statusuntil": "",
+                "statusremaining": 0,
+                "rules": [],
+                "savedRules": []
+            }
+        }
+    }
+]

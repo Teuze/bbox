@@ -1,0 +1,92 @@
+[
+    {
+        "backup": {
+            "wireless": {
+                "5": {
+                    "parameters": {
+                        "ssid": "",
+                        "wpaKey": ""
+                    },
+                    "status": {
+                        "enable": 1,
+                        "nbStation": 0,
+                        "running": 0
+                    },
+                    "dynamic": {
+                        "rssi": "",
+                        "rate": "",
+                        "dlBytes": 0,
+                        "ulBytes": 0
+                    }
+                },
+                "24": {
+                    "parameters": {
+                        "ssid": "",
+                        "wpaKey": ""
+                    },
+                    "status": {
+                        "enable": 1,
+                        "nbStation": 0,
+                        "running": 0
+                    },
+                    "dynamic": {
+                        "rssi": "",
+                        "rate": "",
+                        "dlBytes": 0,
+                        "ulBytes": 0
+                    }
+                }
+            },
+            "usb": {
+                "running": 0
+            },
+            "state": {
+                "status": "None",
+                "stateName": "Stopped",
+                "ipLan": "0.0.0.0",
+                "ipWan": "",
+                "connectionType": "",
+                "adminPassword": "",
+                "established": "NA"
+            },
+            "informations": {
+                "ssid": "",
+                "passphrase": "",
+                "model": ""
+            },
+            "stats": {
+                "usedData": "",
+                "usedDuration": "",
+                "signalStrength": "",
+                "usimStatus": ""
+            },
+            "history": [
+                {
+                    "id": 1,
+                    "beginning": "",
+                    "end": ""
+                },
+                {
+                    "id": 2,
+                    "beginning": "",
+                    "end": ""
+                },
+                {
+                    "id": 3,
+                    "beginning": "",
+                    "end": ""
+                },
+                {
+                    "id": 4,
+                    "beginning": "",
+                    "end": ""
+                },
+                {
+                    "id": 5,
+                    "beginning": "",
+                    "end": ""
+                }
+            ]
+        }
+    }
+]

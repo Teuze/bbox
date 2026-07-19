@@ -1,0 +1,47 @@
+[
+    {
+        "notification": {
+            "alerts": [
+                {
+                    "id": 1,
+                    "enable": 1,
+                    "name": "Accès à l'interface d'administration",
+                    "events": "EVENT_NOTIFY_LOGIN_LOCAL,EVENT_NOTIFY_LOGIN_LOCAL_FAILED,EVENT_NOTIFY_LOGIN_REMOTE,EVENT_NOTIFY_LOGIN_REMOTE_FAILED",
+                    "action": {
+                        "type": "Mail",
+                        "delay": 0,
+                        "mail": {
+                            "dests": ""
+                        }
+                    }
+                },
+                {
+                    "id": 2,
+                    "enable": 1,
+                    "name": "Changement de mot de passe",
+                    "events": "EVENT_NOTIFY_USER_CHANGEPWD",
+                    "action": {
+                        "type": "Mail",
+                        "delay": 0,
+                        "mail": {
+                            "dests": ""
+                        }
+                    }
+                },
+                {
+                    "id": 3,
+                    "enable": 1,
+                    "name": "Nouveau périphérique connecté",
+                    "events": "EVENT_NOTIFY_DEVICE_NEW",
+                    "action": {
+                        "type": "Mail",
+                        "delay": 0,
+                        "mail": {
+                            "dests": ""
+                        }
+                    }
+                }
+            ]
+        }
+    }
+]

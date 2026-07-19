@@ -1,0 +1,202 @@
+[
+    {
+        "now": "2026-07-02T05:58:29+0200",
+        "authenticated": 1,
+        "display": {
+            "state": "I",
+            "luminosity": 2
+        },
+        "errorCode": {
+            "value": ""
+        },
+        "internet": {
+            "state": "-1"
+        },
+        "voip": [
+            {
+                "status": "Up",
+                "callstate": "Idle",
+                "message": 0,
+                "notanswered": 0
+            }
+        ],
+        "iptv": [],
+        "usb": {
+            "printer": [],
+            "storage": []
+        },
+        "wireless": {
+            "status": "Configured",
+            "radio": 1,
+            "changedate": "2026-07-02T05:43:40Z",
+            "wps": {
+                "status": "None",
+                "24": {
+                    "available": 1
+                },
+                "5": {
+                    "available": 1
+                },
+                "enable": 1,
+                "timeout": 0
+            },
+            "guest24enable": 0,
+            "guest5enable": 0,
+            "guestenable": 0,
+            "compatibility24enable": 0,
+            "compatibility5enable": 0
+        },
+        "services": {
+            "identificationDevices": {
+                "onboarded": 0,
+                "state": "ONBOARDING",
+                "available": 1,
+                "enable": 1
+            },
+            "cybersecurity": {
+                "available": 0,
+                "enable": 0,
+                "threatCount": 0
+            },
+            "contentFiltering": {
+                "eventCount": 0,
+                "available": 0,
+                "enable": 0
+            },
+            "hotspot": {
+                "enable": 0
+            },
+            "firewall": {
+                "enable": 1
+            },
+            "dyndns": {
+                "enable": 0
+            },
+            "dhcp": {
+                "enable": 1
+            },
+            "nat": {
+                "enable": 0
+            },
+            "dmz": {
+                "enable": 0
+            },
+            "natpat": {
+                "enable": 0
+            },
+            "upnp": {
+                "igd": {
+                    "enable": 0
+                }
+            },
+            "notification": {
+                "enable": 0
+            },
+            "proxywol": {
+                "enable": 0
+            },
+            "remoteweb": {
+                "enable": 0
+            },
+            "parentalcontrol": {
+                "enable": 0,
+                "status": "",
+                "statusUntil": "",
+                "statusRemaining": 0
+            },
+            "wifischeduler": {
+                "enable": 0,
+                "status": "",
+                "statusUntil": "",
+                "statusRemaining": 0
+            },
+            "voipscheduler": {
+                "enable": 0,
+                "status": "",
+                "statusUntil": "",
+                "statusRemaining": 0
+            },
+            "gamermode": {
+                "enable": 0
+            },
+            "dhcp6": {
+                "enable": 0
+            },
+            "samba": {
+                "enable": 0,
+                "status": 0
+            },
+            "printer": {
+                "enable": 1,
+                "status": 0
+            },
+            "dlna": {
+                "enable": 0,
+                "status": 0
+            },
+            "nanoCdn": {
+                "enable": 1,
+                "status": "Running"
+            }
+        },
+        "diags": [
+            {
+                "ring_test": {
+                    "id": 1,
+                    "status": "Idle"
+                },
+                "echo_test": {
+                    "id": 1,
+                    "status": "Idle"
+                }
+            },
+            {
+                "ring_test": {
+                    "id": 2,
+                    "status": ""
+                },
+                "echo_test": {
+                    "id": 2,
+                    "status": ""
+                }
+            }
+        ],
+        "hosts": [
+            {
+                "hostname": "Bbox-TV-001",
+                "ipaddress": "192.168.1.157"
+            }
+        ],
+        "guests": [],
+        "wan": {
+            "ip": {
+                "state": {
+                    "ip": "-1",
+                    "ipv6": "Discover"
+                },
+                "stats": {
+                    "rx": {
+                        "occupation": 0
+                    },
+                    "tx": {
+                        "occupation": 0
+                    }
+                }
+            }
+        },
+        "alerts": {
+            "count": 0
+        },
+        "cpl": {
+            "count": 0
+        },
+        "screen": {
+            "state": "on",
+            "counter": 1538
+        },
+        "link": {
+            "state": "Up",
+            "type": "sfp"
+        }
+    }
+]

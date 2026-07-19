@@ -1,0 +1,14 @@
+[
+    {
+        "wireless": {
+            "deactivation": {
+                "status": "Idle",
+                "timeout": 0,
+                "duration": 300
+            },
+            "radio": {
+                "enable": 1
+            }
+        }
+    }
+]

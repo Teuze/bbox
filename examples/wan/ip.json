@@ -1,0 +1,33 @@
+[
+    {
+        "wan": {
+            "internet": {
+                "state": "-1"
+            },
+            "interface": {
+                "id": 4,
+                "default": 0,
+                "state": 1
+            },
+            "ip": {
+                "address": "176.160.175.56",
+                "cgnatenable": 0,
+                "maptenable": 0,
+                "state": "Up",
+                "gateway": "176.160.128.1",
+                "dnsservers": "194.158.122.10,194.158.122.15",
+                "subnet": "255.255.255.255",
+                "dnsserversv6": "2001:860:b0ff:1::1,2001:860:b0ff:1::2",
+                "ip6state": "Discover",
+                "ip6address": [],
+                "ip6prefix": [],
+                "mac": "f0:4d:d4:07:26:f0",
+                "mtu": 1500
+            },
+            "link": {
+                "state": "Up",
+                "type": "sfp"
+            }
+        }
+    }
+]

@@ -1,0 +1,179 @@
+[
+    {
+        "hosts": {
+            "list": [
+                {
+                    "id": 1,
+                    "active": 1,
+                    "devicetype": "STB",
+                    "duid": "",
+                    "guest": 0,
+                    "hostname": "Bbox-TV-001",
+                    "ipaddress": "192.168.1.157",
+                    "lease": 55254,
+                    "link": "Ethernet",
+                    "macaddress": "d0:5a:00:08:a1:82",
+                    "type": "DHCP",
+                    "firstseen": "2025-01-06T16:00:12+0100",
+                    "lastseen": 0,
+                    "serialNumber": "214023140433560",
+                    "ip6address": [
+                        {
+                            "ipaddress": "2001:861:3007:a3b0:b05:e51b:470f:beda",
+                            "status": "Preferred",
+                            "lastseen": "2026-07-02T05:58:11+0200",
+                            "lastscan": "2026-07-02T05:53:20+0200"
+                        },
+                        {
+                            "ipaddress": "fe80::39f5:5a31:87d:535e",
+                            "status": "Preferred",
+                            "lastseen": "2026-07-02T05:58:11+0200",
+                            "lastscan": "2026-07-02T05:53:22+0200"
+                        }
+                    ],
+                    "ethernet": {
+                        "physicalport": 0,
+                        "logicalport": 1,
+                        "speed": 1000,
+                        "mode": "Half"
+                    },
+                    "stb": {
+                        "product": "UZW4020BYT",
+                        "serial": "214023140433560"
+                    },
+                    "wireless": {
+                        "wexindex": 0,
+                        "static": 1,
+                        "band": "",
+                        "txUsage": 0,
+                        "rxUsage": 0,
+                        "estimatedRate": 0,
+                        "rssi0": 0,
+                        "mcs": 0,
+                        "rate": 0
+                    },
+                    "wirelessByBand": [],
+                    "plc": {
+                        "rxphyrate": "",
+                        "txphyrate": "",
+                        "associateddevice": 0,
+                        "interface": 0,
+                        "ethernetspeed": 0
+                    },
+                    "informations": {
+                        "type": "Décodeur TV",
+                        "manufacturer": "",
+                        "model": "",
+                        "icon": "stb",
+                        "operatingSystem": "",
+                        "version": ""
+                    },
+                    "parentalcontrol": {
+                        "enable": 0,
+                        "status": "Allowed",
+                        "statusRemaining": 0,
+                        "statusUntil": ""
+                    },
+                    "ping": {
+                        "average": 0
+                    },
+                    "scan": {
+                        "services": []
+                    }
+                }
+            ]
+        },
+        "downloadThreshold": {
+            "wifiLow": 100,
+            "wifiHigh": 300,
+            "wifiMCS": 3,
+            "ethLow": 100,
+            "ethHigh": 1000
+        },
+        "wirelesshosts": [
+            {
+                "stations": [
+                    {
+                        "macaddress": "f0:a7:31:58:2c:6f",
+                        "rssi": "-20",
+                        "txRate": "",
+                        "rxRate": 6,
+                        "caps": "0xff0"
+                    },
+                    {
+                        "macaddress": "a8:80:55:ae:70:a9",
+                        "rssi": "-41",
+                        "txRate": "",
+                        "rxRate": 72,
+                        "caps": "0xff0"
+                    },
+                    {
+                        "macaddress": "88:a2:9e:27:1b:4f",
+                        "rssi": "-19",
+                        "txRate": "",
+                        "rxRate": 24,
+                        "caps": "0xff0"
+                    }
+                ]
+            },
+            {
+                "stations": [
+                    {
+                        "macaddress": "04:e8:b9:ca:1f:16",
+                        "rssi": "-45",
+                        "txRate": "",
+                        "rxRate": 2401,
+                        "caps": "0x175f"
+                    },
+                    {
+                        "macaddress": "ba:4d:c7:45:b8:38",
+                        "rssi": "-55",
+                        "txRate": "",
+                        "rxRate": 6,
+                        "caps": "0x1305"
+                    }
+                ]
+            },
+            {
+                "stations": []
+            },
+            {
+                "guest": 1,
+                "stations": []
+            },
+            {
+                "guest": 1,
+                "stations": []
+            },
+            {
+                "stations": []
+            },
+            {
+                "compatibility": 1,
+                "stations": []
+            },
+            {
+                "compatibility": 1,
+                "stations": []
+            },
+            {
+                "stations": []
+            },
+            {
+                "stations": []
+            },
+            {
+                "stations": []
+            },
+            {
+                "stations": []
+            }
+        ],
+        "extenderhosts": []
+    },
+    {
+        "hosts": {
+            "list": []
+        }
+    }
+]

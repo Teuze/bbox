@@ -1,0 +1,341 @@
+[
+    {
+        "dhcp": {
+            "optionsstatic": [
+                {
+                    "id": 6,
+                    "option": 6,
+                    "value": "192.168.1.254"
+                }
+            ],
+            "options": [],
+            "optionscount": 0,
+            "optionscapabilities": [
+                {
+                    "id": 2,
+                    "type": "INT",
+                    "description": "Time offset",
+                    "rfc": "RFC 2132"
+                },
+                {
+                    "id": 6,
+                    "type": "IP",
+                    "description": "domain name server",
+                    "rfc": "RFC 2132"
+                },
+                {
+                    "id": 7,
+                    "type": "IP",
+                    "description": "log server",
+                    "rfc": "RFC 2132"
+                },
+                {
+                    "id": 13,
+                    "type": "INT",
+                    "description": "boot file size",
+                    "rfc": "RFC 2132"
+                },
+                {
+                    "id": 16,
+                    "type": "STRING",
+                    "description": "swap server",
+                    "rfc": "RFC 2132"
+                },
+                {
+                    "id": 17,
+                    "type": "STRING",
+                    "description": "root path.",
+                    "rfc": "RFC 2132"
+                },
+                {
+                    "id": 18,
+                    "type": "STRING",
+                    "description": "extensions path.",
+                    "rfc": "RFC 2132"
+                },
+                {
+                    "id": 26,
+                    "type": "INT",
+                    "description": "interface mtu",
+                    "rfc": "RFC 2132"
+                },
+                {
+                    "id": 33,
+                    "type": "STRING",
+                    "description": "Static routing table.",
+                    "rfc": "RFC 2132"
+                },
+                {
+                    "id": 35,
+                    "type": "INT",
+                    "description": "ARP cache timeout.",
+                    "rfc": "RFC 2132"
+                },
+                {
+                    "id": 42,
+                    "type": "IP",
+                    "description": "NTP server address.",
+                    "rfc": "RFC 2132"
+                },
+                {
+                    "id": 44,
+                    "type": "IP",
+                    "description": "NetBIOS name server.",
+                    "rfc": "RFC 2132"
+                },
+                {
+                    "id": 47,
+                    "type": "STRING",
+                    "description": "NetBIOS scope.",
+                    "rfc": "RFC 2132"
+                },
+                {
+                    "id": 60,
+                    "type": "STRING",
+                    "description": "Class-identifier.",
+                    "rfc": "RFC 1533,_RFC 2132"
+                },
+                {
+                    "id": 66,
+                    "type": "STRING",
+                    "description": "TFTP server name.",
+                    "rfc": "RFC 2132"
+                },
+                {
+                    "id": 67,
+                    "type": "STRING",
+                    "description": "Bootfile name.",
+                    "rfc": "RFC 2132"
+                },
+                {
+                    "id": 68,
+                    "type": "IP",
+                    "description": "Mobile IP Home Agent.",
+                    "rfc": "RFC 2132"
+                },
+                {
+                    "id": 69,
+                    "type": "IP",
+                    "description": "Simple Mail Transport Protocol Server.",
+                    "rfc": "RFC 2132"
+                },
+                {
+                    "id": 70,
+                    "type": "IP",
+                    "description": "Post Office Protocol (POP3) Server.",
+                    "rfc": "RFC 2132"
+                },
+                {
+                    "id": 71,
+                    "type": "IP",
+                    "description": "Network News Transport Protocol Server.",
+                    "rfc": "RFC 2132"
+                },
+                {
+                    "id": 72,
+                    "type": "IP",
+                    "description": "WWW Server.",
+                    "rfc": "RFC 2132"
+                },
+                {
+                    "id": 74,
+                    "type": "IP",
+                    "description": "Default Internet Relay Chat (IRC) Server.",
+                    "rfc": "RFC 2132"
+                },
+                {
+                    "id": 81,
+                    "type": "STRING",
+                    "description": "FQDN, Fully Qualified Domain Name.",
+                    "rfc": "RFC 4702"
+                },
+                {
+                    "id": 82,
+                    "type": "STRING",
+                    "description": "Relay Agent Information.",
+                    "rfc": "RFC 3046,_RFC 5010"
+                },
+                {
+                    "id": 83,
+                    "type": "STRING",
+                    "description": "Internet Storage Name Service.",
+                    "rfc": "RFC 4174"
+                },
+                {
+                    "id": 85,
+                    "type": "STRING",
+                    "description": "NDS servers.",
+                    "rfc": "RFC 2241"
+                },
+                {
+                    "id": 86,
+                    "type": "STRING",
+                    "description": "NDS tree name.",
+                    "rfc": "RFC 2241"
+                },
+                {
+                    "id": 87,
+                    "type": "STRING",
+                    "description": "NDS context.",
+                    "rfc": "RFC 2241"
+                },
+                {
+                    "id": 100,
+                    "type": "STRING",
+                    "description": "IEEE 1003.1 TZ String.",
+                    "rfc": "RFC 4833"
+                },
+                {
+                    "id": 101,
+                    "type": "STRING",
+                    "description": "Reference to the TZ Database.",
+                    "rfc": "RFC 4833"
+                },
+                {
+                    "id": 112,
+                    "type": "STRING",
+                    "description": "NetInfo Parent Server Address.",
+                    "rfc": "RFC 3679"
+                },
+                {
+                    "id": 113,
+                    "type": "STRING",
+                    "description": "NetInfo Parent Server Tag.",
+                    "rfc": "RFC 3679"
+                },
+                {
+                    "id": 116,
+                    "type": "BOOL",
+                    "description": "Auto-Configure",
+                    "rfc": "RFC 2563"
+                },
+                {
+                    "id": 117,
+                    "type": "STRING",
+                    "description": "Name Service Search.",
+                    "rfc": "RFC 2937"
+                },
+                {
+                    "id": 119,
+                    "type": "STRING",
+                    "description": "DNS domain search list.",
+                    "rfc": "RFC 3397"
+                },
+                {
+                    "id": 120,
+                    "type": "STRING",
+                    "description": "SIP Servers DHCP Option.",
+                    "rfc": "RFC 3361"
+                },
+                {
+                    "id": 121,
+                    "type": "STRING",
+                    "description": "Classless Static Route Option.",
+                    "rfc": "RFC 3442"
+                },
+                {
+                    "id": 124,
+                    "type": "STRING",
+                    "description": "Vendor-Identifying Vendor Class.",
+                    "rfc": "RFC 3925"
+                },
+                {
+                    "id": 125,
+                    "type": "STRING",
+                    "description": "Vendor-Identifying Vendor-Specific.",
+                    "rfc": "RFC 3925"
+                },
+                {
+                    "id": 128,
+                    "type": "IP",
+                    "description": "TFTP Server IP address.",
+                    "rfc": "RFC 4578"
+                },
+                {
+                    "id": 129,
+                    "type": "IP",
+                    "description": "Call Server IP address.",
+                    "rfc": "RFC 4578"
+                },
+                {
+                    "id": 131,
+                    "type": "IP",
+                    "description": "Remote statistics server IP address.",
+                    "rfc": "RFC 4578"
+                },
+                {
+                    "id": 132,
+                    "type": "INT",
+                    "description": "802.1P VLAN ID.",
+                    "rfc": "RFC 4578"
+                },
+                {
+                    "id": 133,
+                    "type": "INT",
+                    "description": "802.1Q L2 Priority.",
+                    "rfc": "RFC 4578"
+                },
+                {
+                    "id": 134,
+                    "type": "STRING",
+                    "description": "Diffserv Code Point.",
+                    "rfc": "RFC 4578"
+                },
+                {
+                    "id": 135,
+                    "type": "STRING",
+                    "description": "HTTP Proxy for phone-specific applications.",
+                    "rfc": "RFC 4578"
+                },
+                {
+                    "id": 138,
+                    "type": "STRING",
+                    "description": "CAPWAP Access Controller addresses.",
+                    "rfc": "RFC 5417"
+                },
+                {
+                    "id": 141,
+                    "type": "STRING",
+                    "description": "SIP UA Configuration Service Domains.",
+                    "rfc": "RFC 6011"
+                },
+                {
+                    "id": 150,
+                    "type": "IP",
+                    "description": "TFTP server address.",
+                    "rfc": "RFC 5859"
+                },
+                {
+                    "id": 176,
+                    "type": "IP",
+                    "description": "IP Telephone.",
+                    "rfc": ""
+                },
+                {
+                    "id": 208,
+                    "type": "STRING",
+                    "description": "pxelinux.magic (string) = F1:00:74:7E (241.0.116.126).",
+                    "rfc": "RFC 5071"
+                },
+                {
+                    "id": 209,
+                    "type": "STRING",
+                    "description": "pxelinux.configfile (text).",
+                    "rfc": "RFC 5071"
+                },
+                {
+                    "id": 210,
+                    "type": "STRING",
+                    "description": "pxelinux.pathprefix (text).",
+                    "rfc": "RFC 5071"
+                },
+                {
+                    "id": 211,
+                    "type": "INT",
+                    "description": "pxelinux.reboottime (unsigned integer 32 bits).",
+                    "rfc": "RFC 5071"
+                }
+            ]
+        }
+    }
+]

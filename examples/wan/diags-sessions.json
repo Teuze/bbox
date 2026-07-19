@@ -1,0 +1,19 @@
+[
+    {
+        "currentip": 16,
+        "tcptimeout": 7450,
+        "highthreshold": 30000,
+        "lowthreshold": 27000,
+        "updatedate": "2026-07-02T05:55:01+0200",
+        "pages": 1,
+        "resultperpage": 250,
+        "hosts": [
+            {
+                "ip": "192.168.1.162",
+                "currentip": 10,
+                "currenttcp": 10,
+                "currentudp": 0
+            }
+        ]
+    }
+]

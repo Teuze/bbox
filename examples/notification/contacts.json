@@ -1,0 +1,14 @@
+[
+    {
+        "notification": {
+            "contacts": [
+                {
+                    "id": 1,
+                    "enable": 1,
+                    "mail": "",
+                    "name": "Votre email Bbox associé à votre compte"
+                }
+            ]
+        }
+    }
+]

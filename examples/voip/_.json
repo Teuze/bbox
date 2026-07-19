@@ -1,0 +1,18 @@
+[
+    {
+        "voip": [
+            {
+                "id": 1,
+                "status": "Up",
+                "callstate": "Idle",
+                "uri": "+33983567472@fai.bouygtel.net",
+                "blockstate": 1,
+                "anoncallstate": 0,
+                "mwi": 0,
+                "message_count": 0,
+                "notanswered": 0,
+                "handsetplugged": 1
+            }
+        ]
+    }
+]

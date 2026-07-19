@@ -1,0 +1,1135 @@
+openapi: 3.1.0
+
+info:
+  title: Ma Bbox Bouygues Telecom
+  version: 1.0.0
+  description: |-
+    API pour l'administration et la supervision des routeurs distribués pour les particuliers.
+
+servers:
+  - url: https://mabbox.bytel.fr/api/v1
+    description: Serveur de production
+
+  - url: http://localhost:8080/api/v1
+    description: Proxy pour les tests
+
+tags:
+  - name: default
+    description: Opérations générales.
+
+  - name: device
+    description: Information et diagnostic matériel.
+
+  - name: dhcp
+    description: Gestion du service d'adressage réseau.
+
+  - name: firewall
+    description: Gestion du pare-feu.
+
+  - name: graphs
+    description: Historique et statistiques.
+
+  - name: hosts
+    description: Équipements connectés au réseau.
+
+  - name: iptv
+    description: Gestion du service de télévision par IP.
+
+  - name: lan
+    description: Gestion du réseau local filaire (Ethernet).
+
+  - name: nat
+    description: Gestion des règles de redirection.
+
+  - name: notification
+    description: Gestion des notifications.
+
+  - name: speedtest
+    description: Tests de débit.
+
+  - name: upnp
+    description: Gestion du service de configuration automatique.
+
+  - name: voip
+    description: Gestion du service de téléphonie sur IP.
+
+  - name: wan
+    description: Gestion de la connexion Internet.
+
+  - name: wireless
+    description: Gestion du réseau local sans-fil (Wi-Fi).
+
+paths:
+  /login:
+    post:
+      requestBody:
+        required: true
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              properties:
+                password:
+                  type: string
+                  example: secret
+                remember:
+                  type: string
+                  example: 0
+      responses:
+        '200':
+          content: null
+      summary: Authentifie l'utilisateur auprès de la Bbox avec le mot de passe administrateur.
+
+  /logout:
+    post:
+      parameters: []
+      responses:
+        '200':
+          content: null
+      summary: Termine la session active de l'utilisateur sur l'interface d'administration.
+
+  /alerts:
+    get:
+      responses:
+        '200':
+          content:
+            application/json:
+              examples:
+                success:
+                  externalValue: examples/alerts.json
+              schema:
+                $ref: "#/components/schemas/Alerts"
+      summary: Retourne la liste des alertes actives.
+
+  /configs:
+    get:
+      responses:
+        '200':
+          content:
+            application/json:
+              examples:
+                success:
+                  externalValue: examples/configs.json
+              schema:
+                $ref: "#/components/schemas/Configs"
+      summary: Retourne la liste des configurations sauvegardées sur la Bbox.
+
+  /cpl:
+    get:
+      responses:
+        '200':
+          content:
+            application/json:
+              examples:
+                success:
+                  externalValue: examples/cpl.json
+              schema:
+                $ref: "#/components/schemas/Cpl"
+      summary: Retourne l'état du réseau CPL et la liste des adaptateurs détectés.
+
+  /device:
+    get:
+      tags:
+        - device
+      responses:
+        '200':
+          content:
+            application/json:
+              examples:
+                success:
+                  externalValue: examples/device/_.json
+              schema:
+                $ref: "#/components/schemas/Device"
+      summary: Retourne les informations matérielles principales de la Bbox.
+
+  /device/led:
+    get:
+      tags:
+        - device
+      responses:
+        '200':
+          content:
+            application/json:
+              examples:
+                success:
+                  externalValue: examples/device/led.json
+              schema:
+                $ref: "#/components/schemas/DeviceLed"
+      summary: Retourne l'état des LEDs de la Bbox.
+
+  /device/log:
+    get:
+      tags:
+        - device
+      responses:
+        '200':
+          content:
+            application/json:
+              examples:
+                success:
+                  externalValue: examples/device/log.json
+              schema:
+                $ref: "#/components/schemas/DeviceLog"
+      summary: Retourne le journal des événements système de la Bbox.
+      security:
+        - BBOX_ID:
+
+  /device/token:
+    get:
+      tags:
+        - device
+      responses:
+        '200':
+          content:
+            application/json:
+              examples:
+                success:
+                  externalValue: examples/device/token.json
+              schema:
+                $ref: "#/components/schemas/DeviceToken"
+      summary: Génère un jeton d'authentification supplémentaire.
+      security:
+        - BBOX_ID:
+
+  /device/usb:
+    get:
+      tags:
+        - device
+      responses:
+        '200':
+          content:
+            application/json:
+              examples:
+                success:
+                  externalValue: examples/device/token.json
+              schema:
+                $ref: "#/components/schemas/DeviceUsb"
+      summary: Retourne la liste les périphériques USB connectés à la Bbox.
+
+  /dhcp/options:
+    get:
+      tags:
+        - dhcp
+      responses:
+        '200':
+          content:
+            application/json:
+              examples:
+                success:
+                  externalValue: examples/dhcp/options.ipv4.json
+              schema:
+                $ref: "#/components/schemas/DhcpOptions"
+      summary: Retourne la liste des options DHCP IPv4 (actives et prises en charge).
+
+  /dhcp6/options:
+    get:
+      tags:
+        - dhcp
+      responses:
+        '200':
+          content:
+            application/json:
+              examples:
+                success:
+                  externalValue: examples/dhcp/options.ipv6.json
+              schema:
+                $ref: "#/components/schemas/DhcpOptions"
+      summary: Retourne la liste des options DHCP IPv6 (actives et prises en charge).
+
+  /dyndns:
+    get:
+      responses:
+        '200':
+          content:
+            application/json:
+              examples:
+                success:
+                  externalValue: examples/dyndns.json
+              schema:
+                $ref: "#/components/schemas/DynDns"
+      summary: Retourne l'état du service DynDNS et la liste des fournisseurs compatibles.
+      security:
+        - BBOX_ID:
+
+  /firewall:
+    get:
+      tags:
+        - firewall
+      responses:
+        '200':
+          content:
+            application/json:
+              examples:
+                success:
+                  externalValue: examples/firewall/_.json
+              schema:
+                $ref: "#/components/schemas/Firewall"
+      summary: Retourne l'état du pare-feu et la liste des protocoles pris en charge.
+      security:
+        - BBOX_ID:
+
+  /firewall/pingresponder:
+    get:
+      tags:
+        - firewall
+      responses:
+        '200':
+          content:
+            application/json:
+              examples:
+                success:
+                  externalValue: examples/firewall/pingresponder.json
+              schema:
+                $ref: "#/components/schemas/FirewallPingResponder"
+      summary: Retourne l'état du Ping Responder du pare-feu.
+      security:
+        - BBOX_ID:
+
+  /firewall/rules:
+    get:
+      tags:
+        - firewall
+      responses:
+        '200':
+          content:
+            application/json:
+              examples:
+                success:
+                  externalValue: examples/firewall/rules.json
+              schema:
+                $ref: "#/components/schemas/FirewallRules"
+      summary: Retourne la liste des règles de pare-feu IPv4 configurées sur la Bbox.
+      security:
+        - BBOX_ID:
+
+  /firewallv6/level:
+    get:
+      tags:
+        - firewall
+      responses:
+        '200':
+          content:
+            application/json:
+              examples:
+                success:
+                  externalValue: examples/firewall/level.json
+              schema:
+                $ref: "#/components/schemas/FirewallLevel"
+      summary: Retourne le niveau de protection du pare-feu IPv6 (Faible, Normal, Élevé).
+      security:
+        - BBOX_ID:
+
+  /firewallv6/rules:
+    get:
+      tags:
+        - firewall
+      responses:
+        '200':
+          content:
+            application/json:
+              examples:
+                success:
+                  externalValue: examples/firewall/rules.json
+              schema:
+                $ref: "#/components/schemas/FirewallRules"
+      summary: Retourne la liste des règles de pare-feu IPv6 configurées sur la Bbox.
+      security:
+        - BBOX_ID:
+
+  /graphs/device/cpu/day:
+    get:
+      tags:
+        - graphs
+      responses:
+        '200':
+          content:
+            application/json:
+              examples:
+                success:
+                  externalValue: examples/graphs/cpu.json
+              schema:
+                $ref: "#/components/schemas/Graph"
+      summary: Retourne l'historique d'utilisation du CPU sur une journée.
+
+  /graphs/dns/all/day:
+    get:
+      tags:
+        - graphs
+      responses:
+        '200':
+          content:
+            application/json:
+              examples:
+                success:
+                  externalValue: examples/graphs/dns.json
+              schema:
+                $ref: "#/components/schemas/Graph"
+      summary: Retourne l'historique du trafic DNS sur une journée.
+
+  /graphs/tcp4/all/day:
+    get:
+      tags:
+        - graphs
+      responses:
+        '200':
+          content:
+            application/json:
+              examples:
+                success:
+                  externalValue: examples/graphs/tcp4.json
+              schema:
+                $ref: "#/components/schemas/Graph"
+      summary: Retourne l'historique du trafic TCP IPv4 sur une journée.
+
+  /graphs/tcp6/all/day:
+    get:
+      tags:
+        - graphs
+      responses:
+        '200':
+          content:
+            application/json:
+              examples:
+                success:
+                  externalValue: examples/graphs/tcp6.json
+              schema:
+                $ref: "#/components/schemas/Graph"
+      summary: Retourne l'historique du trafic TCP IPv6 sur une journée.
+
+  /graphs/wan/connections/day:
+    get:
+      tags:
+        - graphs
+      responses:
+        '200':
+          content:
+            application/json:
+              examples:
+                success:
+                  externalValue: examples/graphs/wan/connections.json
+              schema:
+                $ref: "#/components/schemas/Graph"
+      summary: Retourne l'historique des connexions WAN actives sur une journée.
+
+  /graphs/wan/downstream/day:
+    get:
+      tags:
+        - graphs
+      responses:
+        '200':
+          content:
+            application/json:
+              examples:
+                success:
+                  externalValue: examples/graphs/wan/downstream.json
+              schema:
+                $ref: "#/components/schemas/Graph"
+      summary: Retourne l'historique du débit descendant du WAN sur une journée.
+
+  /graphs/wan/upstream/day:
+    get:
+      tags:
+        - graphs
+      responses:
+        '200':
+          content:
+            application/json:
+              examples:
+                success:
+                  externalValue: examples/graphs/wan/upstream.json
+              schema:
+                $ref: "#/components/schemas/Graph"
+      summary: Retourne l'historique du débit montant du WAN sur une journée.
+
+  /hosts:
+    get:
+      tags:
+        - hosts
+      responses:
+        '200':
+          content:
+            application/json:
+              examples:
+                success:
+                  externalValue: examples/hosts/_.json
+              schema:
+                $ref: "#/components/schemas/Hosts"
+      summary: Retourne la liste de tous les équipements connus du réseau local.
+      security:
+        - BBOX_ID:
+
+  /hosts/me:
+    get:
+      tags:
+        - hosts
+      responses:
+        '200':
+          content:
+            application/json:
+              examples:
+                success:
+                  externalValue: examples/hosts/me.json
+              schema:
+                $ref: "#/components/schemas/Host"
+      summary: Retourne les caractéristiques de l'équipement courant.
+
+  /iptv:
+    get:
+      tags:
+        - iptv
+      responses:
+        '200':
+          content:
+            application/json:
+              examples:
+                success:
+                  externalValue: examples/iptv/_.json
+              schema:
+                $ref: "#/components/schemas/Iptv"
+      summary: Retourne l'état actuel du service IPTV.
+      security:
+        - BBOX_ID:
+
+  /iptv/diags:
+    get:
+      tags:
+        - iptv
+      responses:
+        '200':
+          content:
+            application/json:
+              examples:
+                success:
+                  externalValue: examples/iptv/diags.json
+              schema:
+                $ref: "#/components/schemas/IptvDiags"
+      summary: Retourne les diagnostics du service IPTV.
+      security:
+        - BBOX_ID:
+
+  /lan/ip:
+    get:
+      tags:
+        - lan
+      responses:
+        '200':
+          content:
+            application/json:
+              examples:
+                success:
+                  externalValue: examples/lan/ip.json
+              schema:
+                $ref: "#/components/schemas/LanIp"
+      summary: Retourne la configuration IP du réseau local.
+
+  /lan/stats:
+    get:
+      tags:
+        - lan
+      responses:
+        '200':
+          content:
+            application/json:
+              examples:
+                success:
+                  externalValue: examples/lan/stats.json
+              schema:
+                $ref: "#/components/schemas/LanStats"
+      summary: Retourne les statistiques de trafic du réseau local.
+
+  /nat/dmz:
+    get:
+      tags:
+        - nat
+      responses:
+        '200':
+          content:
+            application/json:
+              examples:
+                success:
+                  externalValue: examples/nat/dmz.json
+              schema:
+                $ref: "#/components/schemas/NatDmz"
+      summary: Retourne la liste des règles de redirection vers la DMZ.
+
+  /nat/rules:
+    get:
+      tags:
+        - nat
+      responses:
+        '200':
+          content:
+            application/json:
+              examples:
+                success:
+                  externalValue: examples/nat/rules.json
+              schema:
+                $ref: "#/components/schemas/NatRules"
+      summary: Retourne la liste des règles de redirection de ports (NAT/PAT).
+
+  /notification:
+    get:
+      tags:
+        - notification
+      responses:
+        '200':
+          content:
+            application/json:
+              examples:
+                success:
+                  externalValue: examples/notification/_.json
+              schema:
+                $ref: "#/components/schemas/Notification"
+      summary: Retourne la configuration complète des notifications.
+      security:
+        - BBOX_ID:
+
+  /notification/alerts:
+    get:
+      tags:
+        - notification
+      responses:
+        '200':
+          content:
+            application/json:
+              examples:
+                success:
+                  externalValue: examples/notification/alerts.json
+              schema:
+                $ref: "#/components/schemas/NotificationAlerts"
+      summary: Liste les alertes de notification configurées.
+      security:
+        - BBOX_ID:
+
+  /notification/contacts:
+    get:
+      tags:
+        - notification
+      responses:
+        '200':
+          content:
+            application/json:
+              examples:
+                success:
+                  externalValue: examples/notification/contacts.json
+              schema:
+                $ref: "#/components/schemas/NotificationContacts"
+      summary: Liste les destinataires de notification configurés.
+      security:
+        - BBOX_ID:
+
+  /notification/events:
+    get:
+      tags:
+        - notification
+      responses:
+        '200':
+          content:
+            application/json:
+              examples:
+                success:
+                  externalValue: examples/notification/events.json
+              schema:
+                $ref: "#/components/schemas/NotificationEvents"
+      summary: Liste l'ensemble des types d'événements disponibles.
+      security:
+        - BBOX_ID:
+
+  /services:
+    get:
+      responses:
+        '200':
+          content:
+            application/json:
+              examples:
+                success:
+                  externalValue: examples/services.json
+              schema:
+                $ref: "#/components/schemas/Services"
+      summary: Retourne l'état d'activation des services de la Bbox.
+
+  /speedtest:
+    get:
+      tags:
+        - speedtest
+      responses:
+        '200':
+          content:
+            application/json:
+              examples:
+                success:
+                  externalValue: examples/speedtest/_.json
+              schema:
+                $ref: "#/components/schemas/SpeedTest"
+      summary: Retourne l'état du test de débit en cours.
+      security:
+        - BBOX_ID:
+    post:
+      tags:
+        - speedtest
+      parameters:
+      - name: btoken
+        in: query
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: true
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              properties:
+                mode:
+                  type: string
+                  example: downlink
+      responses:
+        '200':
+          content: null
+      summary: Démarre un test de débit à l'aide d'un jeton d'authentification.
+      security:
+        - BBOX_ID:
+
+  /speedtest/info:
+    get:
+      tags:
+        - speedtest
+      responses:
+        '200':
+          content:
+            application/json:
+              examples:
+                success:
+                  externalValue: examples/speedtest/info.json
+              schema:
+                $ref: "#/components/schemas/SpeedTestInfo"
+      summary: Retourne l'historique des dernières mesures de débit.
+      security:
+        - BBOX_ID:
+
+  /summary:
+    get:
+      responses:
+        '200':
+          content:
+            application/json:
+              examples:
+                success:
+                  externalValue: examples/summary.json
+              schema:
+                $ref: "#/components/schemas/Summary"
+      summary: Retourne une synthèse de l'état de la Bbox.
+
+  /upnp/igd:
+    get:
+      tags:
+        - upnp
+      responses:
+        '200':
+          content:
+            application/json:
+              examples:
+                success:
+                  externalValue: examples/upnp/igd.json
+              schema:
+                $ref: "#/components/schemas/UpnpIgd"
+      summary: Retourne l'état et la configuration du service UPnP IGD (ouverture automatique de ports).
+
+  /voip:
+    get:
+      tags:
+        - voip
+      responses:
+        '200':
+          content:
+            application/json:
+              examples:
+                success:
+                  externalValue: ./examples/voip/_.json
+              schema:
+                $ref: "#/components/schemas/Voip"
+      summary: Retourne l'état de la ligne téléphonique.
+      security:
+        - BBOX_ID:
+
+  /voip/diag:
+    get:
+      tags:
+        - voip
+      responses:
+        '200':
+          content:
+            application/json:
+              examples:
+                success:
+                  externalValue: ./examples/voip/diag.json
+              schema:
+                $ref: "#/components/schemas/VoipDiag"
+      summary: Retourne les diagnostics de la ligne téléphonique.
+      security:
+        - BBOX_ID:
+
+  /voip/scheduler:
+    get:
+      tags:
+        - voip
+      responses:
+        '200':
+          content:
+            application/json:
+              examples:
+                success:
+                  externalValue: ./examples/voip/scheduler.json
+              schema:
+                $ref: "#/components/schemas/VoipScheduler"
+      summary: Retourne la configuration du contrôle horaire de la ligne téléphonique.
+      security:
+        - BBOX_ID:
+
+  /wan/backup:
+    get:
+      tags:
+        - wan
+      responses:
+        '200':
+          content:
+            application/json:
+              examples:
+                success:
+                  externalValue: ./examples/wan/backup.json
+              schema:
+                $ref: "#/components/schemas/WanBackup"
+      summary: Retourne l'état de la connexion de secours du WAN.
+      security:
+        - BBOX_ID:
+
+  /wan/diags:
+    get:
+      tags:
+        - wan
+      responses:
+        '200':
+          content:
+            application/json:
+              examples:
+                success:
+                  externalValue: ./examples/wan/diags.json
+              schema:
+                $ref: "#/components/schemas/WanDiags"
+      summary: Retourne les résultats d'autodiagnostic de la connexion au WAN.
+      security:
+        - BBOX_ID:
+
+  /wan/diags/sessions:
+    get:
+      tags:
+        - wan
+      responses:
+        '200':
+          content:
+            application/json:
+              examples:
+                success:
+                  externalValue: ./examples/wan/diags-sessions.json
+              schema:
+                $ref: "#/components/schemas/WanSessions"
+      summary: Retourne le nombre de sessions IP actives par équipement.
+      security:
+        - BBOX_ID:
+
+  /wan/ftth/stats:
+    get:
+      tags:
+        - wan
+      responses:
+        '200':
+          content:
+            application/json:
+              examples:
+                success:
+                  externalValue: ./examples/wan/ftth-stats.json
+              schema:
+                $ref: "#/components/schemas/WanFtth"
+      summary: Retourne l'état et le mode de liaison de l'interface fibre FTTH.
+
+  /wan/ip:
+    get:
+      tags:
+        - wan
+      responses:
+        '200':
+          content:
+            application/json:
+              examples:
+                success:
+                  externalValue: ./examples/wan/ip.json
+              schema:
+                $ref: "#/components/schemas/WanIp"
+      summary: Retourne les informations IP de la connexion Internet.
+
+  /wan/ip/stats:
+    get:
+      tags:
+        - wan
+      responses:
+        '200':
+          content:
+            application/json:
+              examples:
+                success:
+                  externalValue: ./examples/wan/ip-stats.json
+              schema:
+                $ref: "#/components/schemas/WanIpStats"
+      summary: Retourne les statistiques de trafic de la connexion Internet.
+
+  /wan/sfp:
+    get:
+      tags:
+        - wan
+      responses:
+        '200':
+          content:
+            application/json:
+              examples:
+                success:
+                  externalValue: ./examples/wan/sfp.json
+              schema:
+                $ref: "#/components/schemas/WanSfp"
+      summary: Retourne les informations techniques du module SFP fibre.
+
+  /wireless:
+    get:
+      tags:
+        - wireless
+      responses:
+        '200':
+          content:
+            application/json:
+              examples:
+                success:
+                  externalValue: ./examples/wireless/_.json
+              schema:
+                $ref: "#/components/schemas/Wireless"
+      summary: Retourne la configuration complète du Wi-Fi.
+      security:
+        - BBOX_ID:
+
+  /wireless/acl:
+    get:
+      tags:
+        - wireless
+      responses:
+        '200':
+          content:
+            application/json:
+              examples:
+                success:
+                  externalValue: ./examples/wireless/acl.json
+              schema:
+                $ref: "#/components/schemas/WirelessAcl"
+      summary: Retourne la liste des règles de contrôle d'accès au Wi-Fi.
+      security:
+        - BBOX_ID:
+
+  /wireless/deactivation:
+    get:
+      tags:
+        - wireless
+      responses:
+        '200':
+          content:
+            application/json:
+              examples:
+                success:
+                  externalValue: ./examples/wireless/deactivation.json
+              schema:
+                $ref: "#/components/schemas/WirelessDeactivation"
+      summary: Retourne l'état de la minuterie d'extinction temporaire du Wi-Fi.
+      security:
+        - BBOX_ID:
+
+  /wireless/repeater:
+    get:
+      tags:
+        - wireless
+      responses:
+        '200':
+          content:
+            application/json:
+              examples:
+                success:
+                  externalValue: ./examples/wireless/repeater.json
+              schema:
+                $ref: "#/components/schemas/WirelessRepeater"
+      summary: Retourne la liste des répéteurs Wi-Fi associés à la Bbox.
+      security:
+        - BBOX_ID:
+
+  /wireless/scheduler:
+    get:
+      tags:
+        - wireless
+      responses:
+        '200':
+          content:
+            application/json:
+              examples:
+                success:
+                  externalValue: ./examples/wireless/scheduler.json
+              schema:
+                $ref: "#/components/schemas/WirelessScheduler"
+      summary: Retourne la configuration du contrôle horaire de la Wi-Fi.
+      security:
+        - BBOX_ID:
+
+components:
+  schemas:
+    Alerts:
+      type: object
+
+    Configs:
+      type: object
+
+    Cpl:
+      type: object
+
+    Device:
+      type: object
+
+    DeviceLed:
+      type: object
+
+    DeviceLog:
+      type: object
+
+    DeviceToken:
+      type: object
+
+    DeviceUsb:
+      type: object
+
+    DhcpOptions:
+      type: object
+
+    DynDns:
+      type: object
+
+    Firewall:
+      type: object
+
+    FirewallLevel:
+      type: object
+
+    FirewallPingResponder:
+      type: object
+
+    FirewallRules:
+      type: object
+
+    Graph:
+      type: object
+
+    Hosts:
+      type: object
+
+    Host:
+      type: object
+
+    Iptv:
+      type: object
+
+    IptvDiags:
+      type: object
+
+    LanIp:
+      type: object
+
+    LanStats:
+      type: object
+
+    NatDmz:
+      type: object
+
+    NatRules:
+      type: object
+
+    Notification:
+      type: object
+
+    NotificationAlerts:
+      type: object
+
+    NotificationContacts:
+      type: object
+
+    NotificationEvents:
+      type: object
+
+    Services:
+      type: object
+
+    SpeedTest:
+      type: object
+
+    SpeedTestInfo:
+      type: object
+
+    Summary:
+      type: object
+
+    UpnpIgd:
+      type: object
+
+    Voip:
+      type: object
+
+    VoipDiag:
+      type: object
+
+    VoipScheduler:
+      type: object
+
+    WanBackup:
+      type: object
+
+    WanDiags:
+      type: object
+
+    WanSessions:
+      type: object
+
+    WanFtth:
+      type: object
+
+    WanInternet:
+      type: object
+
+    WanIp:
+      type: object
+
+    WanIpStats:
+      type: object
+
+    WanSfp:
+      type: object
+
+    Wireless:
+      type: object
+
+    WirelessAcl:
+      type: object
+
+    WirelessDeactivation:
+      type: object
+
+    WirelessRepeater:
+      type: object
+
+    WirelessScheduler:
+      type: object
+
+  securitySchemes:
+    BBOX_ID:
+      type: apiKey
+      name: X-BBOX-ID
+      in: header
