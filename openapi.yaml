@@ -233,7 +233,7 @@ paths:
             application/json:
               examples:
                 success:
-                  externalValue: examples/device/token.json
+                  externalValue: examples/device/usb.json
               schema:
                 $ref: "#/components/schemas/DeviceUsb"
       summary: Retourne la liste les périphériques USB connectés à la Bbox.
