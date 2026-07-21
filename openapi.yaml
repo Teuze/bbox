@@ -201,7 +201,7 @@ paths:
                 success:
                   externalValue: examples/device/mem.json
               schema:
-                $ref: "#/components/schemas/DeviceLog"
+                $ref: "#/components/schemas/DeviceMem"
       summary: Retourne l'usage mémoire de la Bbox.
 
   /device/reboot:
@@ -1050,6 +1050,9 @@ components:
       type: object
 
     DeviceLog:
+      type: object
+
+    DeviceMem:
       type: object
 
     DeviceToken:
