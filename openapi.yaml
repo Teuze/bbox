@@ -142,6 +142,21 @@ paths:
                 $ref: "#/components/schemas/Device"
       summary: Retourne les informations matérielles principales de la Bbox.
 
+  /device/cpu:
+    get:
+      tags:
+        - device
+      responses:
+        '200':
+          content:
+            application/json:
+              examples:
+                success:
+                  externalValue: examples/device/cpu.json
+              schema:
+                $ref: "#/components/schemas/DeviceCpu"
+      summary: Retourne l'usage processeur de la Bbox.
+
   /device/led:
     get:
       tags:
@@ -1026,6 +1041,9 @@ components:
       type: object
 
     Device:
+      type: object
+
+    DeviceCpu:
       type: object
 
     DeviceLed:
