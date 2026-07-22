@@ -50,6 +50,9 @@ tags:
   - name: parentalcontrol
     description: Gestion du service de contrôle parental.
 
+  - name: password-recovery
+    description: Récupération du mot de passe d'administration.
+
   - name: speedtest
     description: Tests de débit.
 
@@ -780,6 +783,30 @@ paths:
       security:
         - BBOX_ID:
 
+  /password-recovery:
+    post:
+      tags:
+        - password-recovery
+      responses:
+        '200':
+          content: null
+      summary: Démarre le processus de récupération.
+
+  /password-recovery/verify:
+    get:
+      tags:
+        - password-recovery
+      responses:
+        '200':
+          content:
+            application/json:
+              examples:
+                success:
+                  externalValue: examples/password-recovery/verify.json
+              schema:
+                $ref: "#/components/schemas/PasswordRecoveryVerify"
+      summary: Vérifie que le bouton poussoir a été actionné.
+
   /speedtest:
     get:
       tags:
@@ -1229,6 +1256,9 @@ components:
       type: object
 
     ParentalControlScheduler:
+      type: object
+
+    PasswordRecoveryVerify:
       type: object
 
     Services:
