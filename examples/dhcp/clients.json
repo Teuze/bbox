@@ -1,0 +1,16 @@
+[
+  {
+    "dhcp": {
+      "clients": [
+        {
+          "id": 2,
+          "hostname": "raspberry",
+          "ipaddress": "192.168.1.8",
+          "ip6address": "",
+          "macaddress": "88:a2:9e:27:1b:4c",
+          "enable": 1
+        }
+      ]
+    }
+  }
+]
