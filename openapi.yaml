@@ -23,6 +23,9 @@ tags:
   - name: dhcp
     description: Gestion du service d'adressage réseau.
 
+  - name: dns
+    description: Gestion du service de résolution des noms de domaine.
+
   - name: firewall
     description: Gestion du pare-feu.
 
@@ -312,6 +315,21 @@ paths:
               schema:
                 $ref: "#/components/schemas/DhcpOptions"
       summary: Retourne la liste des options DHCP IPv6 (actives et prises en charge).
+
+  /dns/stats:
+    get:
+      tags:
+        - dns
+      responses:
+        '200':
+          content:
+            application/json:
+              examples:
+                success:
+                  externalValue: examples/dns/stats.json
+              schema:
+                $ref: "#/components/schemas/DnsStats"
+      summary: Retourne les statistiques du service DNS de la Bbox.
 
   /dyndns:
     get:
@@ -1098,6 +1116,9 @@ components:
       type: object
 
     DhcpOptions:
+      type: object
+
+    DnsStats:
       type: object
 
     DynDns:
