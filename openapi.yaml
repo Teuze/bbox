@@ -867,6 +867,19 @@ paths:
                 $ref: "#/components/schemas/UpnpIgd"
       summary: Retourne l'état et la configuration du service UPnP IGD (ouverture automatique de ports).
 
+  /usersave:
+    get:
+      responses:
+        '200':
+          content:
+            application/json:
+              examples:
+                success:
+                  externalValue: examples/usersave.json
+              schema:
+                $ref: "#/components/schemas/UserSave"
+      summary: Retourne l'état de la dernière sauvegarde utilisateur.
+
   /voip:
     get:
       tags:
@@ -1231,6 +1244,9 @@ components:
       type: object
 
     UpnpIgd:
+      type: object
+
+    UserSave:
       type: object
 
     Voip:

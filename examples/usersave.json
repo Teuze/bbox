@@ -1,0 +1,18 @@
+[
+  {
+    "usersave": {
+      "now": "2026-07-22T07:19:35+0200",
+      "enable": 1,
+      "numberofboots": 31,
+      "datelastrestore": "",
+      "datelastsave": "2026-07-19T16:25:43+0200",
+      "dateLastSaveError": "",
+      "lastSaveErrorType": "",
+      "status": "Ready",
+      "restorefromfactory": 0,
+      "delay": 3600,
+      "authorized": 1,
+      "neversynced": 0
+    }
+  }
+]
