@@ -38,3 +38,5 @@ venv.bak/
 .vscode/
 
 routes.txt
+*.har.json
+har2openapi/
