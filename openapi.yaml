@@ -127,6 +127,21 @@ paths:
                 $ref: "#/components/schemas/Cpl"
       summary: Retourne l'état du réseau CPL et la liste des adaptateurs détectés.
 
+  /contentfiltering:
+    get:
+      responses:
+        '200':
+          content:
+            application/json:
+              examples:
+                success:
+                  externalValue: examples/contentfiltering.json
+              schema:
+                $ref: "#/components/schemas/ContentFiltering"
+      summary: Retourne l'état du service de filtrage de contenu.
+      security:
+        - BBOX_ID:
+
   /device:
     get:
       tags:
@@ -1035,6 +1050,9 @@ components:
       type: object
 
     Configs:
+      type: object
+
+    ContentFiltering:
       type: object
 
     Cpl:
