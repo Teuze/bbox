@@ -47,6 +47,9 @@ tags:
   - name: notification
     description: Gestion des notifications.
 
+  - name: parentalcontrol
+    description: Gestion du service de contrôle parental.
+
   - name: speedtest
     description: Tests de débit.
 
@@ -743,6 +746,40 @@ paths:
                 $ref: "#/components/schemas/Services"
       summary: Retourne l'état d'activation des services de la Bbox.
 
+  /parentalcontrol:
+    get:
+      tags:
+        - parentalcontrol
+      responses:
+        '200':
+          content:
+            application/json:
+              examples:
+                success:
+                  externalValue: examples/parentalcontrol/_.json
+              schema:
+                $ref: "#/components/schemas/ParentalControl"
+      summary: Retourne l'état général du service de contrôle parental.
+      security:
+        - BBOX_ID:
+
+  /parentalcontrol/scheduler:
+    get:
+      tags:
+        - parentalcontrol
+      responses:
+        '200':
+          content:
+            application/json:
+              examples:
+                success:
+                  externalValue: examples/parentalcontrol/scheduler.json
+              schema:
+                $ref: "#/components/schemas/ParentalControlScheduler"
+      summary: Retourne les règles de programmation du contrôle parental.
+      security:
+        - BBOX_ID:
+
   /speedtest:
     get:
       tags:
@@ -1173,6 +1210,12 @@ components:
       type: object
 
     NotificationEvents:
+      type: object
+
+    ParentalControl:
+      type: object
+
+    ParentalControlScheduler:
       type: object
 
     Services:
