@@ -1,0 +1,52 @@
+[
+    {
+        "dhcp": {
+            "options": [],
+            "optionscount": 0,
+            "optionscapabilities": [
+                {
+                    "id": 31,
+                    "type": "IPV6",
+                    "description": "SNTP_SERVERS",
+                    "rfc": "RFC 4075"
+                },
+                {
+                    "id": 41,
+                    "type": "STRING",
+                    "description": "NEW_POSIX_TIMEZONE",
+                    "rfc": "RFC 4833"
+                },
+                {
+                    "id": 42,
+                    "type": "STRING",
+                    "description": "NEW_TZDB_TIMEZONE",
+                    "rfc": "RFC 4833"
+                },
+                {
+                    "id": 59,
+                    "type": "STRING",
+                    "description": "BOOTFILE_URL",
+                    "rfc": "RFC 5970"
+                },
+                {
+                    "id": 60,
+                    "type": "STRING",
+                    "description": "BOOTFILE_PARAM",
+                    "rfc": "RFC 5970"
+                },
+                {
+                    "id": 61,
+                    "type": "STRING",
+                    "description": "CLIENT_ARCH_TYPE",
+                    "rfc": "RFC 5970"
+                },
+                {
+                    "id": 62,
+                    "type": "STRING",
+                    "description": "NII",
+                    "rfc": "RFC 5970"
+                }
+            ]
+        }
+    }
+]

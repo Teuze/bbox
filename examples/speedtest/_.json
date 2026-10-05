@@ -1,0 +1,11 @@
+[
+    {
+        "speedtest": {
+            "mode": "downlink",
+            "state": "pending",
+            "speed": "OK",
+            "fromBoot": 0,
+            "error_code": 0
+        }
+    }
+]

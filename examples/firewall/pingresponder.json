@@ -1,0 +1,11 @@
+[
+    {
+        "firewall": {
+            "pingresponder": {
+                "enable": 0,
+                "ip": "",
+                "ipv6": ""
+            }
+        }
+    }
+]

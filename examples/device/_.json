@@ -1,0 +1,57 @@
+[
+    {
+        "device": {
+            "now": "2026-07-02T05:58:16+0200",
+            "status": 1,
+            "numberofboots": 27,
+            "modelname": "F@st5688b",
+            "modelclass": "F5688b-osin",
+            "optimisation": 1,
+            "user_configured": 1,
+            "serialnumber": "127213214303625",
+            "display": {
+                "luminosity": 2,
+                "luminosity_extender": 100,
+                "state": "I"
+            },
+            "main": {
+                "version": "25.2.22",
+                "date": "2025-10-09T09:48:17Z"
+            },
+            "reco": {
+                "version": "25.2.22",
+                "date": "2025-10-09T09:38:55Z"
+            },
+            "running": {
+                "version": "25.2.22",
+                "date": "2025-10-09T09:47:45+0000"
+            },
+            "spl": {
+                "version": "3.6.2"
+            },
+            "tpl": {
+                "version": "3.6.2"
+            },
+            "ldr1": {
+                "version": "4.4.20"
+            },
+            "ldr2": {
+                "version": "4.4.20"
+            },
+            "firstusedate": "2024-10-04T00:42:08Z",
+            "uptime": 31215,
+            "lastFactoryReset": 0,
+            "using": {
+                "ipv4": 1,
+                "ipv6": 1,
+                "ftth": 1,
+                "adsl": 0,
+                "vdsl": 0
+            },
+            "isCellularEnable": 1,
+            "newihm": 1,
+            "newihmCdc": 1,
+            "hwRevision": 1
+        }
+    }
+]

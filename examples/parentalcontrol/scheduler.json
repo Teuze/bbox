@@ -1,0 +1,13 @@
+[
+  {
+    "parentalcontrol": {
+      "scheduler": {
+        "now": "2026-07-22T06:50:35+0200",
+        "enable": 0,
+        "status": "",
+        "rules": [],
+        "savedRules": []
+      }
+    }
+  }
+]

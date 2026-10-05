@@ -1,0 +1,19 @@
+[
+    {
+        "iptv": {
+            "multicast": {
+                "state": "NotConnected",
+                "date": "2026-07-02T05:56:03+0200"
+            },
+            "platform": {
+                "state": "NotConnected",
+                "date": ""
+            }
+        },
+        "now": "2026-07-02T05:56:04+0200",
+        "igmp": {
+            "enable": 1,
+            "state": 2
+        }
+    }
+]

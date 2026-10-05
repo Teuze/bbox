@@ -1,0 +1,30 @@
+[
+    {
+        "wan": {
+            "ip": {
+                "stats": {
+                    "rx": {
+                        "packets": 2616364,
+                        "bytes": "3479936001",
+                        "packetserrors": 0,
+                        "packetsdiscards": 0,
+                        "occupation": 0,
+                        "bandwidth": 66,
+                        "maxBandwidth": 1000000,
+                        "contractualBandwidth": 0
+                    },
+                    "tx": {
+                        "packets": 2337879,
+                        "bytes": "1939407594",
+                        "packetserrors": 0,
+                        "packetsdiscards": 0,
+                        "occupation": 0,
+                        "bandwidth": 14,
+                        "maxBandwidth": 1000000,
+                        "contractualBandwidth": 0
+                    }
+                }
+            }
+        }
+    }
+]

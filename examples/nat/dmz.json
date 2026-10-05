@@ -1,0 +1,12 @@
+[
+    {
+        "nat": {
+            "dmz": {
+                "ipaddress": "0.0.0.1",
+                "state": 0,
+                "enable": 0,
+                "dnsprotect": 1
+            }
+        }
+    }
+]

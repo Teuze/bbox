@@ -1,0 +1,13 @@
+[
+    {
+        "led": {"power": "off"},
+        "ethernetPort": [
+            {"id": 1, "state": "Up"},
+            {"id": 2, "state": "Up"},
+            {"id": 3, "state": "Down"},
+            {"id": 4, "state": "Down"},
+            {"id": 5, "state": "Down"}
+        ],
+        "screen": {"state": "on","counter": 1484}
+    }
+]

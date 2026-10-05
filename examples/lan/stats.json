@@ -1,0 +1,87 @@
+[
+    {
+        "lan": {
+            "stats": {
+                "rx": {
+                    "bytes": 161938480,
+                    "packets": 401110,
+                    "packetserrors": 0,
+                    "packetsdiscards": 0
+                },
+                "tx": {
+                    "bytes": 889326018,
+                    "packets": 709704,
+                    "packetserrors": 0,
+                    "packetsdiscards": 0
+                },
+                "port": [
+                    {
+                        "index": 1,
+                        "rx": {
+                            "bandwidth": 0,
+                            "bytes": 5466573,
+                            "packets": 30565
+                        },
+                        "tx": {
+                            "bandwidth": 1,
+                            "bytes": 26226782,
+                            "packets": 67883
+                        }
+                    },
+                    {
+                        "index": 2,
+                        "rx": {
+                            "bandwidth": 0,
+                            "bytes": 0,
+                            "packets": 0
+                        },
+                        "tx": {
+                            "bandwidth": 1,
+                            "bytes": 3978762,
+                            "packets": 39606
+                        }
+                    },
+                    {
+                        "index": 3,
+                        "rx": {
+                            "bandwidth": 0,
+                            "bytes": 0,
+                            "packets": 0
+                        },
+                        "tx": {
+                            "bandwidth": 0,
+                            "bytes": 0,
+                            "packets": 0
+                        }
+                    },
+                    {
+                        "index": 4,
+                        "rx": {
+                            "bandwidth": 0,
+                            "bytes": 0,
+                            "packets": 0
+                        },
+                        "tx": {
+                            "bandwidth": 0,
+                            "bytes": 0,
+                            "packets": 0
+                        }
+                    },
+                    {
+                        "index": 5,
+                        "rx": {
+                            "bandwidth": 0,
+                            "bytes": 0,
+                            "packets": 0
+                        },
+                        "tx": {
+                            "bandwidth": 0,
+                            "bytes": 0,
+                            "packets": 0
+                        }
+                    }
+                ]
+            }
+        }
+    }
+]

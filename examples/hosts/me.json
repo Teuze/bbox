@@ -1,0 +1,92 @@
+[
+    {
+        "host": {
+            "id": 21,
+            "hostname": "Latitude-5440",
+            "macaddress": "33:33:33:33:33:33",
+            "ipaddress": "0.0.0.1",
+            "type": "DHCP",
+            "link": "Offline",
+            "devicetype": "Device",
+            "ip6address": [],
+            "ethernet": {
+                "physicalport": 6,
+                "logicalport": 7,
+                "speed": 0,
+                "mode": ""
+            },
+            "wireless": {
+                "wexindex": 0,
+                "static": 0,
+                "band": 5,
+                "txUsage": 1034,
+                "rxUsage": 20,
+                "estimatedRate": 864,
+                "rssi0": "-42",
+                "mcs": 9,
+                "rate": 1921
+            },
+            "wirelessByBand": [],
+            "plc": {
+                "rxphyrate": "",
+                "txphyrate": "",
+                "associateddevice": 0,
+                "interface": 0,
+                "ethernetspeed": 0
+            },
+            "informations": {
+                "type": "Ordinateur",
+                "manufacturer": "HP",
+                "model": "",
+                "icon": "computer",
+                "operatingSystem": "Linux",
+                "version": "10.9.2"
+            },
+            "parentalcontrol": {
+                "enable": 0,
+                "status": "Allowed",
+                "statusRemaining": 0,
+                "statusUntil": ""
+            },
+            "lease": 85565,
+            "firstSeen": "2025-10-15T22:08:02+0200",
+            "lastSeen": 0,
+            "active": 1,
+            "scan": {
+                "enable": 1,
+                "status": "",
+                "services": []
+            },
+            "ping": {
+                "min": 0,
+                "max": 0,
+                "average": 0,
+                "success": 0,
+                "error": 0,
+                "tries": 0,
+                "status": "",
+                "results": []
+            }
+        },
+        "wirelesshosts": [
+            {},
+            {
+                "stations": {
+                    "macaddress": "04:e8:b9:ca:1f:16",
+                    "caps": "0x175f",
+                    "rate": 1921,
+                    "rssi": "-42"
+                }
+            },
+            {},
+            {
+                "compatibility": 1
+            },
+            {
+                "compatibility": 1
+            },
+            {}
+        ],
+        "extenderhosts": []
+    }
+]

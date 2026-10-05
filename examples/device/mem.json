@@ -1,0 +1,12 @@
+[
+  {
+    "device": {
+      "mem": {
+        "total": 958672,
+        "free": 508812,
+        "cached": 113824,
+        "committedas": 406856
+      }
+    }
+  }
+]

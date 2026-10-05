@@ -1,0 +1,18 @@
+[
+    {
+        "firewall": {
+            "state": "",
+            "enable": 1,
+            "protoscapabilities": [
+                "udp",
+                "tcp",
+                "esp",
+                "ah",
+                "icmp",
+                "icmpv6",
+                "igmp",
+                "gre"
+            ]
+        }
+    }
+]

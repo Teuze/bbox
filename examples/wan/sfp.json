@@ -1,0 +1,32 @@
+[
+    {
+        "wan": {
+            "sfp": {
+                "enable": 1,
+                "voltage": 32,
+                "pon_mode": "GPON",
+                "pon_moduleclass": "B+",
+                "pon_internalstatus": "Up",
+                "downlink_speed": "2000000",
+                "uplink_speed": "1000000",
+                "sfpserial": "SMBS0141819a",
+                "sfp_vendor_id": "SMBS",
+                "olt_vendor_id": "HWTC",
+                "status_connexion": 1,
+                "status_sfp": "Up",
+                "connection_time": "",
+                "serial_number": "0x534d42530141819a",
+                "receive_power": "-17032",
+                "transmit_power": 2970,
+                "temperature": 400,
+                "modele": "",
+                "mark": "",
+                "hard_vers": "",
+                "firmware_vers_1": "12725.02.22",
+                "status_firmware_v1": 1,
+                "firmware_vers_2": "12725.02.20",
+                "status_firmware_v2": 0
+            }
+        }
+    }
+]

@@ -1,0 +1,107 @@
+[
+    {
+        "hosts": {
+            "list": [
+                {
+                    "id": 1,
+                    "active": 1,
+                    "devicetype": "STB",
+                    "duid": "",
+                    "guest": 0,
+                    "hostname": "Bbox-TV-001",
+                    "ipaddress": "0.0.0.1",
+                    "lease": 55254,
+                    "link": "Ethernet",
+                    "macaddress": "44:44:44:44:44:44",
+                    "type": "DHCP",
+                    "firstseen": "2025-01-06T16:00:12+0100",
+                    "lastseen": 0,
+                    "serialNumber": "214023140433560",
+                    "ip6address": [],
+                    "ethernet": {
+                        "physicalport": 0,
+                        "logicalport": 1,
+                        "speed": 1000,
+                        "mode": "Half"
+                    },
+                    "stb": {
+                        "product": "UZW4020BYT",
+                        "serial": "214023140433560"
+                    },
+                    "wireless": {
+                        "wexindex": 0,
+                        "static": 1,
+                        "band": "",
+                        "txUsage": 0,
+                        "rxUsage": 0,
+                        "estimatedRate": 0,
+                        "rssi0": 0,
+                        "mcs": 0,
+                        "rate": 0
+                    },
+                    "wirelessByBand": [],
+                    "plc": {
+                        "rxphyrate": "",
+                        "txphyrate": "",
+                        "associateddevice": 0,
+                        "interface": 0,
+                        "ethernetspeed": 0
+                    },
+                    "informations": {
+                        "type": "Décodeur TV",
+                        "manufacturer": "",
+                        "model": "",
+                        "icon": "stb",
+                        "operatingSystem": "",
+                        "version": ""
+                    },
+                    "parentalcontrol": {
+                        "enable": 0,
+                        "status": "Allowed",
+                        "statusRemaining": 0,
+                        "statusUntil": ""
+                    },
+                    "ping": {
+                        "average": 0
+                    },
+                    "scan": {
+                        "services": []
+                    }
+                }
+            ]
+        },
+        "downloadThreshold": {
+            "wifiLow": 100,
+            "wifiHigh": 300,
+            "wifiMCS": 3,
+            "ethLow": 100,
+            "ethHigh": 1000
+        },
+        "wirelesshosts": [
+            {
+                "stations": [
+                    {
+                        "macaddress": "88:88:88:88:88:88",
+                        "rssi": "-20",
+                        "txRate": "",
+                        "rxRate": 6,
+                        "caps": "0xff0"
+                    }
+                ]
+            },
+            {
+                "guest": 1,
+                "stations": []
+            },
+            {
+                "stations": []
+            }
+        ],
+        "extenderhosts": []
+    },
+    {
+        "hosts": {
+            "list": []
+        }
+    }
+]

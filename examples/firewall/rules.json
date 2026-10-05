@@ -1,0 +1,26 @@
+[
+    {
+        "firewall": {
+            "rules": [
+                {
+                    "id": 1,
+                    "enable": 1,
+                    "description": "Ports bloqués par défaut : SpamFilter, SMB",
+                    "action": "Drop",
+                    "srcipnot": 0,
+                    "srcip": "",
+                    "dstipnot": 0,
+                    "dstip": "",
+                    "srcportnot": 0,
+                    "srcports": "",
+                    "dstportnot": 0,
+                    "dstports": "25,445",
+                    "order": 1,
+                    "protocols": "tcp,udp",
+                    "ipprotocol": "IPv4+IPv6",
+                    "utilisation": 31
+                }
+            ]
+        }
+    }
+]
